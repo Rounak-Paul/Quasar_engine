@@ -3,7 +3,7 @@ file(GLOB_RECURSE APP_SOURCES CONFIGURE_DEPENDS
     src/**/*.h
 )
 
-add_executable(SandBox src/SandBoxApp.cpp ${APP_SOURCES})
+add_executable(Editor src/EditorApp.cpp ${APP_SOURCES})
 
 
 

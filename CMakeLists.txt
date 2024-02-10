@@ -19,9 +19,9 @@ add_subdirectory(Quasar)
 target_compile_definitions(Quasar PRIVATE QS_BUILD_DLL)
 
 # SandBox
-add_subdirectory(SandBox)
-target_link_libraries(SandBox PRIVATE Quasar)
-target_include_directories(SandBox PRIVATE Quasar/src)
+add_subdirectory(Editor)
+target_link_libraries(Editor PRIVATE Quasar)
+target_include_directories(Editor PRIVATE Quasar/src)
 
 target_link_libraries(Quasar PUBLIC glfw)
 target_include_directories(Quasar PRIVATE 
