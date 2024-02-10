@@ -7,10 +7,13 @@ else()
 	set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
 endif()
 
+set (VULKAN_PATH "C:/VulkanSDK/1.3.275.0")
+
 project(QuasarEngine)
 
 add_subdirectory(Vendor/glfw)
 add_subdirectory(Vendor/glm/glm) 
+add_subdirectory(Vendor/imgui)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
@@ -33,10 +36,13 @@ target_include_directories(Quasar PRIVATE
 	${CMAKE_SOURCE_DIR}/Vendor/glfw/include
 )
 
-set (VULKAN_PATH "C:/VulkanSDK/1.3.275.0")
-
 target_link_directories(Quasar PUBLIC ${VULKAN_PATH}/Lib)
 target_link_libraries(Quasar PUBLIC ${VULKAN_PATH}/Lib/vulkan-1.lib)
 target_include_directories(Quasar PUBLIC 
 	${VULKAN_PATH}/Include
+)
+
+target_link_libraries(Quasar PUBLIC imgui)
+target_include_directories(Quasar PRIVATE 
+	${CMAKE_SOURCE_DIR}/Vendor/imgui
 )

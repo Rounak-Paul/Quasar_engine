@@ -16,9 +16,6 @@ Description	:		Entry Point for the User Application. Contains main()
 
 extern Quasar::Application* Quasar::CreateApplication();
 
-/// <summary>
-/// Init methods for Core Engine
-/// </summary>
 void init() {
 	std::cout << "Starting Quasar Engine" << std::endl;
 }

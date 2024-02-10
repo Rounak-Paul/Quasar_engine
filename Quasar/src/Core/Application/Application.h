@@ -24,13 +24,16 @@ namespace Quasar {
 	/// <summary>
 	/// Create and Run main Application
 	/// </summary>
-	class QUASAR_API Application
-	{
+	class QUASAR_API Application {
     public:
         Application();
-		virtual ~Application();
+		~Application();
 
         void Run();
+
+		void Init();
+		void Update();
+		void Shutdown();
 	};
 
 	// To be defined in Client

@@ -19,29 +19,23 @@ namespace Quasar {
 
 	Application::~Application() {}
 
-	void Application::Run()
-	{
-        glfwInit();
+	void Application::Init() {
 
-		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-		GLFWwindow*window=glfwCreateWindow(800,600,"Vulkanwindow", nullptr,nullptr);
+	}
 
-		uint32_t extensionCount=0;
-		vkEnumerateInstanceExtensionProperties(nullptr,&extensionCount, nullptr);
+	void Application::Update() {
+		
+	}
 
-		std::cout<<extensionCount<<"extensionssupported\n";
+	void Application::Shutdown() {
+		
+	}
 
-		glm::mat4 matrix;
-		glm::vec4 vec;
-		auto test=matrix*vec;
-
-		while(!glfwWindowShouldClose(window)){
-			glfwPollEvents();
-		}
-
-		glfwDestroyWindow(window);
-
-		glfwTerminate();
+	void Application::Run(){
+        
+		Init();
+		Update();
+		Shutdown();
         
 	}
 
