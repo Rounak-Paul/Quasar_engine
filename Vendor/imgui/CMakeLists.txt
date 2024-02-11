@@ -1,15 +1,21 @@
-file(GLOB_RECURSE IMGUI_SOURCES CONFIGURE_DEPENDS
-    *.cpp
-    *.h
 
-)
 
 add_library(imgui 
     backends/imgui_impl_glfw.h 
     backends/imgui_impl_glfw.cpp 
     backends/imgui_impl_vulkan.h
     backends/imgui_impl_vulkan.cpp
-    ${SOURCES}
+    imconfig.h
+    imgui_demo.cpp
+    imgui_draw.cpp
+    imgui_internal.h
+    imgui_tables.cpp
+    imgui_widgets.cpp
+    imgui.cpp
+    imgui.h
+    imstb_rectpack.h
+    imstb_textedit.h
+    imstb_truetype.h
 )
 
 set_target_properties(imgui PROPERTIES LINKER_LANGUAGE CXX)

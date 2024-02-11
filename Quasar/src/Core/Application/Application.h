@@ -19,11 +19,10 @@ Description	:		The Application class is the main interface between the
 #include <common.h>
 #include <Core/Core.h>
 
+#include "../Window/Window.h"
+
 namespace Quasar {
 
-	/// <summary>
-	/// Create and Run main Application
-	/// </summary>
 	class QUASAR_API Application {
     public:
         Application();
@@ -34,6 +33,13 @@ namespace Quasar {
 		void Init();
 		void Update();
 		void Shutdown();
+
+		int WIDTH = 800;
+		int HEIGHT = 600;
+		std::string NAME = "QuasarEngine";
+
+	private:
+		Window* window;
 	};
 
 	// To be defined in Client

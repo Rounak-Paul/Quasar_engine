@@ -28,3 +28,4 @@ Description	:		Pre compiled header, include in all Quasar core scripts.
 #include <imgui.h>
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_vulkan.h>
+#include <vulkan/vulkan.h>

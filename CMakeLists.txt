@@ -11,6 +11,8 @@ set (VULKAN_PATH "C:/VulkanSDK/1.3.275.0")
 
 project(QuasarEngine)
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQS_DEBUG")
+
 add_subdirectory(Vendor/glfw)
 add_subdirectory(Vendor/glm/glm) 
 add_subdirectory(Vendor/imgui)
@@ -46,3 +48,5 @@ target_link_libraries(Quasar PUBLIC imgui)
 target_include_directories(Quasar PRIVATE 
 	${CMAKE_SOURCE_DIR}/Vendor/imgui
 )
+
+

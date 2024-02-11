@@ -1,6 +1,7 @@
 #include "Window.h"
 
 namespace Quasar {
+
     Window::Window(int w, int h, std::string name) : width{w}, height{h}, windowName{name} {
         Init();
     }
@@ -19,7 +20,7 @@ namespace Quasar {
             width,
             height,
             windowName.c_str(),
-            nullptr, // For full screen mode set monitor
+            nullptr, // glfwGetPrimaryMonitor(), // For full screen mode set monitor
             nullptr
         );
     }
