@@ -10,8 +10,8 @@ public:
 	Sandbox()
 	{
 		std::cout << "Test from SandBox Application" << std::endl;
-		WIDTH = 1920;
-		HEIGHT = 1080;
+		WIDTH = 1280;
+		HEIGHT = 720;
 		NAME = "Quasar Editor";
 
 	}

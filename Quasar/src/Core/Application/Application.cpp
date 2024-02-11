@@ -41,12 +41,13 @@ namespace Quasar {
 	}
 
     void Application::Shutdown() {
-
+		delete window;
     }
 
     void Application::Run(){
         Init();
 		Update();
+		Shutdown();
 	}
 
 
