@@ -25,6 +25,12 @@ int main(int argc, char** argv)
 	init();
 
 	auto app = Quasar::CreateApplication();
-	app->Run();
+	try {
+		app->Run();
+	} catch(const std::exception& e) {
+		std::cerr << e.what() << std::endl; 
+		return EXIT_FAILURE;	
+	}
 	delete app;
+	return EXIT_SUCCESS;
 }

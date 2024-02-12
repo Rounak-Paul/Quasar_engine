@@ -21,6 +21,7 @@ namespace Quasar {
 
 	void Application::Init() {
 		window = new Window(WIDTH, HEIGHT, NAME);
+		renderer = new Renderer();
 
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
@@ -42,6 +43,10 @@ namespace Quasar {
 
     void Application::Shutdown() {
 		delete window;
+		window = nullptr;
+
+		delete renderer;
+		renderer = nullptr;
     }
 
     void Application::Run(){

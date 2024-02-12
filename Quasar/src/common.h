@@ -17,6 +17,7 @@ Description	:		Pre compiled header, include in all Quasar core scripts.
 #include <string>
 #include <cstdlib>
 #include <stdexcept>
+#include <vector>
 
 // Vendors
 #define GLFW_INCLUDE_VULKAN

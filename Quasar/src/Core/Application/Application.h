@@ -19,7 +19,8 @@ Description	:		The Application class is the main interface between the
 #include <common.h>
 #include <Core/Core.h>
 
-#include "../Window/Window.h"
+#include <Window/Window.h>
+#include <Renderer/Renderer.h>
 
 namespace Quasar {
 
@@ -40,6 +41,7 @@ namespace Quasar {
 
 	private:
 		Window* window;
+		Renderer* renderer;
 	};
 
 	// To be defined in Client
