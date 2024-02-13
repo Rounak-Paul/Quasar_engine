@@ -6,6 +6,7 @@
 
 #include <Window/Window.h>
 #include <Renderer/Renderer.h>
+#include <Renderer/Validation.h>
 
 // ----- Entry Point -----
 
